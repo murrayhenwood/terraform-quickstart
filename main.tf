@@ -19,6 +19,26 @@ terraform {
 }
 
 
-module az_resource_group {
+module "az_resource_group" {
  source = "./az_resource_group"
 }
+  
+/*
+module "some_other_resource" {
+   source = "./az_resource_group"
+  
+  resource_group_name = module.az_resource_group.name
+  
+}
+*/
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
