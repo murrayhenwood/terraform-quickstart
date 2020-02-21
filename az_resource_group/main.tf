@@ -14,10 +14,10 @@ resource "azurerm_resource_group" "example" {
 }
 
 
-out "id" {
+output "id" {
  value = azurerm_resource_group.example.id
 }
 
-out "name" {
+output "name" {
  value = azurerm_resource_group.example.name
 }
