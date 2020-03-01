@@ -28,7 +28,7 @@ module "az_resource_group" {
   
 
 module "some_other_resource" {
-  source = "./az_resource_group"
+  source = "./some_other_resource"
   
   resource_group_name = module.az_resource_group.name  
 }
