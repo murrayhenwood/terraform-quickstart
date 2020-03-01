@@ -9,7 +9,10 @@ locals {
 
 
 provider "azuread" {}
-provider "azurerm" {}
+provider "azurerm" {
+  features {}
+}
+
 terraform {
   backend "azurerm" {
     storage_account_name = "terraform_storage_account_name_1234"
@@ -20,15 +23,14 @@ terraform {
 
 
 module "az_resource_group" {
- source = "./az_resource_group"
+  source = "./az_resource_group"
 }
   
 
 module "some_other_resource" {
-   source = "./az_resource_group"
+  source = "./az_resource_group"
   
-  resource_group_name = module.az_resource_group.name
-  
+  resource_group_name = module.az_resource_group.name  
 }
 
   
