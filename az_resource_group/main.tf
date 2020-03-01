@@ -5,7 +5,7 @@
 
 
 resource "azurerm_resource_group" "example" {
-  name     = "terraform-workshop-rg"
+  name     = "another-terraform-workshop-rg"
   location = "Australia East"
 
   tags = {
